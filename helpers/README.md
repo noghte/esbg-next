@@ -1,0 +1,2 @@
+1. Run `resize_images.py` to resize a batch of images to a specific width (the height will be adjusted accordingly).
+2. Run `create_people.py` to upload data to strapi based on `data/people.json` along with their images from `data/images`.

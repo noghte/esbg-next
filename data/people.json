@@ -1,0 +1,233 @@
+[
+    {
+        "name": "Samiksha Katiyar",
+        "role": "Research Professional IV",
+        "image": "images/sami.jpg",
+        "homepage": "http://www.bmb.uga.edu/directory/dr-samiksha-katiyar",
+        "status": "current"
+    },
+    {
+        "name": "Safal Shrestha",
+        "role": "Postdoctoral scholar",
+        "image": "images/safal.jpg",
+        "homepage": "https://savill88.github.io/personal-website/",
+        "status": "current"
+    },
+    {
+        "name": "Aarya Venkat",
+        "role": "Postdoctoral scholar",
+        "image": "images/aarya.jpg",
+        "homepage": "https://aaryakat.com/",
+        "status": "current"
+    },
+    {
+        "name": "Zhongliang Zhou",
+        "role": "Graduate Research Assistant",
+        "image": "images/zhongliang2.jpg",
+        "homepage": "https://www.zhongliangzhou.com",
+        "status": "current"
+    },
+    {
+        "name": "Nathan Gravel",
+        "role": "Graduate Research Assistant",
+        "image": "images/gravel.jpg",
+        "homepage": "#",
+        "status": "current"
+    },
+    {
+        "name": "Brady O'Boyle",
+        "role": "Graduate Research Assistant",
+        "image": "images/bradyoboyle.jpeg",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "Grace Watterson",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/grace1h.jpeg",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "George Bendzunas",
+        "role": "Postdoctoral Scholar",
+        "image": "images/georgeb.jpg",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "Nathan Kleber",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/image_soon.png",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "Rayna Carter",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/image_soon.png",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "Ruili Fang",
+        "role": "Graduate Research Assistant",
+        "image": "images/image_soon.png",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "Arya Nagare",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/image_soon.png",
+        "homepage": "./",
+        "status": "current"
+    },
+    {
+        "name": "Mariah Salcedo",
+        "role": "Graduate Research Assistant",
+        "image": "images/maya.jpg",
+        "homepage": "./",
+        "status": "alumni"
+    },
+    {
+        "name": "Ishan Aggarwal",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/ishan.jpeg",
+        "homepage": "./",
+        "status": "alumni"
+    },
+    {
+        "name": "Andrew Lamb",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/image_soon.png",
+        "homepage": "./",
+        "status": "alumni"
+    },
+    {
+        "name": "Wayland Yeung",
+        "role": "Postdoctoral Scholar",
+        "image": "images/wayland.jpg",
+        "homepage": "https://iob.uga.edu/graduate-students/",
+        "status": "alumni"
+    },
+    {
+        "name": "Claire Bunn",
+        "role": "2020 Goldwater Scholar, Gates-Cambridge Fellowship, PhD at Cambridge University",
+        "image": "images/claire.png",
+        "homepage": "./",
+        "status": "alumni"
+    },
+    {
+        "name": "Priyanka Parikh",
+        "role": "Foundation Fellow, Undergraduate Research Assistant",
+        "image": "images/Priyanka.jpg",
+        "homepage": "./",
+        "status": "alumni"
+    },
+    {
+        "name": "Niral Thaker",
+        "role": "MD student at Medical College of Georgia",
+        "image": "images/niral.jpg",
+        "homepage": "#",
+        "status": "alumni"
+    },
+    {
+        "name": "Liang-Chin Huang",
+        "role": "Graduate Research Assistant",
+        "image": "images/liang.jpg",
+        "homepage": "http://iob.uga.edu/students/huang-liang-chin/",
+        "status": "alumni"
+    },
+    {
+        "name": "Rahil Taujale",
+        "role": "Graduate Research Assistant",
+        "image": "images/rahil.jpg",
+        "homepage": "https://rhilt13.github.io/",
+        "status": "alumni"
+    },
+    {
+        "name": "Hyunjin Annie Kwon",
+        "role": "Postdoctoral Scholar at University of California, San Francisco School of Medicine",
+        "image": "images/annie.jpg",
+        "homepage": "https://www.linkedin.com/in/annie-kwon-phd-54378763",
+        "status": "alumni"
+    },
+    {
+        "name": "Steven Thomas Scott",
+        "role": "Undergraduate Research Assistant",
+        "image": "images/steven.jpg",
+        "homepage": "#",
+        "status": "alumni"
+    },
+    {
+        "name": "Zheng Ruan",
+        "role": "Postdoctoral Fellow at Van Andel Institute, K99/R00 award",
+        "image": "images/ruan.jpg",
+        "homepage": "https://www.researchgate.net/profile/Zheng_Ruan3",
+        "status": "alumni"
+    },
+    {
+        "name": "Carlos E Sanz",
+        "role": "Post-doc at the Kojo Lab at UGA",
+        "image": "images/carlos.jpg",
+        "homepage": "https://www.researchgate.net/profile/Carlos_Sanz-Rodriguez",
+        "status": "alumni"
+    },
+    {
+        "name": "Ayda Farhadi",
+        "role": "Graduate Research Assistant",
+        "image": "images/ayda.jpg",
+        "homepage": "https://www.researchgate.net/profile/Ayda_Farhadi",
+        "status": "alumni"
+    },
+    {
+        "name": "Navid Hashemi",
+        "role": "Graduate Research Assistant",
+        "image": "images/navid.jpg",
+        "homepage": "http://cobweb.cs.uga.edu/~hashemi/",
+        "status": "alumni"
+    },
+    {
+        "name": "Daniel McSkimming",
+        "role": "Bioinformatics Research Scientist, Genome, Environment and Microbiome (GEM) Community of Excellence in Bioinformatics and Life Sciences, University at Buffalo",
+        "image": "images/daniel.png",
+        "homepage": "http://www.bmb.uga.edu/directory/daniel-mcskimming",
+        "status": "alumni"
+    },
+    {
+        "name": "Shima Dastgheyb",
+        "role": "Post-doc Fellow at Stanford",
+        "image": "images/shima.jpg",
+        "homepage": "http://cobweb.cs.uga.edu/~shima/",
+        "status": "alumni"
+    },
+    {
+        "name": "Tuan Nguyen",
+        "role": "2014 Goldwater Scholar",
+        "image": "images/tuan.jpg",
+        "homepage": "https://www.linkedin.com/in/tuan-nguyen-a008a146",
+        "status": "alumni"
+    },
+    {
+        "name": "Eric Talevich",
+        "role": "Scientific Programmer Analyst at UCSF School of Medicine",
+        "image": "images/eric.jpg",
+        "homepage": "http://profiles.ucsf.edu/eric.talevich",
+        "status": "alumni"
+    },
+    {
+        "name": "Krishnadev Oruganty",
+        "role": "Lead scientist at GVK Biosciences",
+        "image": "images/krish.jpg",
+        "homepage": "https://www.linkedin.com/in/krishnadevoruganty",
+        "status": "alumni"
+    },
+    {
+        "name": "Smita Mohanty",
+        "role": "Scientist at GVK Biosciences",
+        "image": "images/smita.jpg",
+        "homepage": "https://www.linkedin.com/in/smita-mohanty-b07862109",
+        "status": "alumni"
+    }
+]

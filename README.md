@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Backend
 
-## Getting Started
+# ESBG Strapi
 
-First, run the development server:
+Installed on https://esbg.lunovid.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To reinstall or debug:
+    - Follow this [documentaion](https://www.digitalocean.com/community/tutorials/how-to-set-up-and-install-strapi-for-production-on-ubuntu-22-04)
+    - In the website diretory, run `NODE_ENV=production npm run build` to build the app
+    - To start the app in development (necessary for adding content types): `yarn develop`
+    - To start the app in production: `pm2 start npm --name "strapi" -- start`
+    - To see the status: `pm2 status`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Domain configurations
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Look at `nginx-esbg.lunovid.com.j2` and `www-esbg.lunovid.com.yaml` in the private repository.
 
-## Learn More
+## Running on the Server
+- 
+# Frontend
+## Directory Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app`: the root directory
+- `app/components`: all the components
+- `app/news`: News page
+- `app/publications`: Publications page
+- `app/join`: Join us page
+- `data`: all the data in json format
+- `publish.sh`: to publish the website
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+In `vscode`, install the `drawio` extension and open the `architecture.drawio` file.
 
-## Deploy on Vercel
+## Update contents
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Edit the markdown files you want to modify.
+- Run `./publish.sh`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Full Installation (one time - for local development)
+1. Install `nvm`. 
+    1. On Linux, to install `nvm`, you can run: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+    2. Close and reopen your terminal
+    3. Verify it is installed by running `command -v nvm`. If it outputs `nvm`, it means it is installed.
+1. Install `node` by running this command: `nvm install v18.19.0`.
+    - To verify, run `node --version`. It should show `v18.19.0`.
+   
+1. In the `esbg-nextjs` directory:
+    - run install npm packages by running `npm install`.
+    - launch the website by running `npm run dev`.
+
+## Troubleshooting
+
+- Clear DNS cache on Mac: `sudo killall -HUP mDNSResponder`
