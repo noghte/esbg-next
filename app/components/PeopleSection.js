@@ -16,7 +16,7 @@ const PeopleSection = ({ data, status }) => { // Now accepts 'data' and 'status'
                         <section className="special">
                             <a href={person.attributes.homepage} className="image fit">
                                 {/* Update the following line according to your image structure */}
-                                <Image src={`https://esbg.lunovid.com${person.attributes.Photo.data.attributes.url}` || `/images/default-person.png`} alt={person.attributes.alternativeText} width={300} height={400} layout="responsive" />
+                                <Image src={`https://esbg.lunovid.com${person.attributes.Photo.data.attributes.url}` || `/images/default-person.png`} alt={person.attributes.alternativeText} width={300} height={400} />
                             </a>
                             <h3>{person.attributes.name}</h3>
                             <p><b>{person.attributes.role}</b></p>

@@ -15,7 +15,7 @@ const Software = () => {
     <div className="row uniform">
       <div className="6u 12u(narrower)">
         <section className="box special">
-          <FontAwesomeIcon icon={faLaptopCode} size="md" className="icon major alt" />
+          <FontAwesomeIcon icon={faLaptopCode} size="sm" className="icon major alt" />
           <h3>LATEST SOFTWARE</h3>
           <p>
             <a href="https://doi.org/10.1093/bioinformatics/btad046" className="button alt">PHOSFORMER</a>
@@ -26,7 +26,7 @@ const Software = () => {
       </div>
       <div className="6u 12u(narrower)">
         <section className="box special">
-          <FontAwesomeIcon icon={faCodeBranch} size="md" className="icon major alt" />
+          <FontAwesomeIcon icon={faCodeBranch} size="sm" className="icon major alt" />
           <h3>github</h3>
           <p>
             <a href="https://github.com/esbgkannan" className="button alt">ESBGKANNAN</a>

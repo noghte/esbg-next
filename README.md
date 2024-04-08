@@ -17,6 +17,29 @@ To reinstall or debug:
 Look at `nginx-esbg.lunovid.com.j2` and `www-esbg.lunovid.com.yaml` in the private repository.
 
 ## Running on the Server
+
+## Moving Strapi to another server
+
+### Pre-requisites
+- Install Postgresql (at least version 13.14 on Ubuntu >=20): `sudo apt install postgresql-13`
+- Follow [instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-and-install-strapi-for-production-on-ubuntu-22-04) to create a db and a user
+
+If already, installed, then:
+- Enter the Postgres by `sudo -u postgres psql`
+- MAKE SURE THAT YOU HAVE A BACKUP, then delete the old database by `DROP DATABASE IF EXISTS "strapi-db";`
+- Re-create it, first by running `psql -u USERNAME`, then `CREATE DATABASE "strapi-db";`.
+- Type `\q` and press Enter to exit the `psql` interface.
+
+### Troubleshooting
+- If Postgres complains about login, make sure that the config file is md5. To do that:
+  - Run `SHOW hba_file;` in psql.
+  - In the `pg_hba.conf` file, change `peer` to `md5` for replication.
+  - Run `sudo systemctl reload postgresql.service` 
+
+### Migration
+1. To migrate the Postgres database, on the source server: `pg_dump -C -h localhost -U USERNAME strapi-db > strapi-bak.sql` (when prompted, enter the Postgres database password)
+2. On the destination server, scp the strapi-bak.sql
+3. Restore the database from the SQL dump file: `psql -U DB_USERNAME -W "strapi-db" < "strapi-bak.sql"`
 - 
 # Frontend
 ## Directory Structure

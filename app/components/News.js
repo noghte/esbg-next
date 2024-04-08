@@ -23,7 +23,7 @@ const News= ({ data }) => {
                 <br />
                 {/* If there's an image, render it. Note: You'll need to adjust 'item.attributes.image' if your items have images */}
                 <a href={item.attributes.Text || '#'} className="image fit">
-                    <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} layout="responsive" alt="News Item" />
+                    <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
                 </a>
                 <p>{item.attributes.PublishDate}</p>
                 <a href={item.attributes.Text || '#'}><h3>{item.attributes.Title}</h3></a>
