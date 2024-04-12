@@ -1,11 +1,15 @@
 "use client";
 import Image from 'next/image';
 
-const News= ({ data }) => {
+const News = ({ data }) => {
     if (!data || data.length === 0) {
         return <p>No news available.</p>;
     }
-	 return (
+
+    // Sorting the news items by date from newest to oldest
+    const sortedData = data.sort((a, b) => new Date(b.attributes.PublishDate) - new Date(a.attributes.PublishDate));
+
+    return (
         <div className="wrapper style3">
             <section className="container">
                 <header className="major">
@@ -17,25 +21,26 @@ const News= ({ data }) => {
                 </header>
 
                 <div className="row">
-    {data.slice(0, 6).map((item, index) => (
-        <div key={index} className="4u 12u(narrower)">
-            <section className="special">
-                <br />
-                {/* If there's an image, render it. Note: You'll need to adjust 'item.attributes.image' if your items have images */}
-                <a href={item.attributes.Text || '#'} className="image fit">
-                    <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
-                </a>
-                <p>{item.attributes.PublishDate}</p>
-                <a href={item.attributes.Text || '#'}><h3>{item.attributes.Title}</h3></a>
-				{/* <p>{item.attributes.Text}</p> */}
-            </section>
-        </div>
-    ))}
-</div>
+                    {sortedData.slice(0, 6).map((item, index) => (
+                        <div key={index} className="4u 12u(narrower)">
+                            <section className="special">
+                                <br />
+                                {/* If there's an image, render it. Note: You'll need to adjust 'item.attributes.image' if your items have images */}
+                                <a href={item.attributes.Text || '#'} className="image fit">
+                                    <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
+                                </a>
+                                <p>{item.attributes.PublishDate}</p>
+                                <a href={item.attributes.Text || '#'}><h3>{item.attributes.Title}</h3></a>
+                                {/* <p>{item.attributes.Text}</p> */}
+                            </section>
+                        </div>
+                    ))}
+                </div>
 
                 <br />
             </section>
         </div>
     )
 };
+
 export default News;
