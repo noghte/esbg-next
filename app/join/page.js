@@ -1,27 +1,6 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 
 const Join = () => {
-    const { register, handleSubmit } = useForm();
-
-    const onSubmit = async (data) => {
-        const formData = new FormData();
-        
-        formData.append("access_key", process.env.WEB3FORMS_ACCESS_KEY);
-        formData.append("name", data.name);
-        formData.append("file", data.file[0]);
-
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-        }).then((res) => res.json());
-        
-        if (res.success) {
-            console.log("Success", res);
-        } else {
-            console.log("Error", res);
-        }
-    };
 
     return (
         <div>
@@ -48,19 +27,7 @@ const Join = () => {
             </div>
 
             <div className="wrapper style1">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" {...register("name")} />
-                    </div>
-                    <div>
-                        <label htmlFor="file">CV File:</label>
-                        <input type="file" id="file" {...register("file")} />
-                    </div>
-                    <div>
-                        <input type="submit" value="Submit CV" />
-                    </div>
-                </form>
+Please submit your CV to Dr. Kannan (nkannan-at-uga.edu) for further consideration.
             </div>
         </div>
     );

@@ -1,77 +1,14 @@
 # Backend
 
-# ESBG Strapi
+# ESBG-NEXT
 
-Installed on https://esbg.lunovid.com
+This project creates the [ESBG website](https://esbg.bmb.uda.edu) that reads data from a Strapi instance.
 
-To reinstall or debug:
-    - Follow this [documentaion](https://www.digitalocean.com/community/tutorials/how-to-set-up-and-install-strapi-for-production-on-ubuntu-22-04)
-    - In the website diretory, run `NODE_ENV=production npm run build` to build the app
-    - To start the app in development (necessary for adding content types): `yarn develop`
-    - To start the app in production: `pm2 start npm --name "strapi" -- start`
-    - To see the status: `pm2 status`
+## Publishing
 
+- Run `generate.sh` to generate the static site. It will generate a folder called `public` in the current directory.
+- Run `publish.sh` to publish the site to the web.
 
-## Domain configurations
-
-Look at `nginx-esbg.lunovid.com.j2` and `www-esbg.lunovid.com.yaml` in the private repository.
-
-## Running on the Server
-
-## Moving Strapi to another server
-
-### Pre-requisites
-- Install Postgresql (at least version 13.14 on Ubuntu >=20): `sudo apt install postgresql-13`
-- Follow [instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-and-install-strapi-for-production-on-ubuntu-22-04) to create a db and a user
-
-If already, installed, then:
-- Enter the Postgres by `sudo -u postgres psql`
-- MAKE SURE THAT YOU HAVE A BACKUP, then delete the old database by `DROP DATABASE IF EXISTS "strapi-db";`
-- Re-create it, first by running `psql -u USERNAME`, then `CREATE DATABASE "strapi-db";`.
-- Type `\q` and press Enter to exit the `psql` interface.
-
-### Troubleshooting
-- If Postgres complains about login, make sure that the config file is md5. To do that:
-  - Run `SHOW hba_file;` in psql.
-  - In the `pg_hba.conf` file, change `peer` to `md5` for replication.
-  - Run `sudo systemctl reload postgresql.service` 
-
-### Migration
-1. To migrate the Postgres database, on the source server: `pg_dump -C -h localhost -U USERNAME strapi-db > strapi-bak.sql` (when prompted, enter the Postgres database password)
-2. On the destination server, scp the strapi-bak.sql
-3. Restore the database from the SQL dump file: `psql -U DB_USERNAME -W "strapi-db" < "strapi-bak.sql"`
-- 
-# Frontend
-## Directory Structure
-
-- `app`: the root directory
-- `app/components`: all the components
-- `app/news`: News page
-- `app/publications`: Publications page
-- `app/join`: Join us page
-- `data`: all the data in json format
-- `publish.sh`: to publish the website
-
-## Architecture
-
-In `vscode`, install the `drawio` extension and open the `architecture.drawio` file.
-
-## Update contents
-
-- Edit the markdown files you want to modify.
-- Run `./publish.sh`
-
-## Full Installation (one time - for local development)
-1. Install `nvm`. 
-    1. On Linux, to install `nvm`, you can run: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
-    2. Close and reopen your terminal
-    3. Verify it is installed by running `command -v nvm`. If it outputs `nvm`, it means it is installed.
-1. Install `node` by running this command: `nvm install v18.19.0`.
-    - To verify, run `node --version`. It should show `v18.19.0`.
-   
-1. In the `esbg-nextjs` directory:
-    - run install npm packages by running `npm install`.
-    - launch the website by running `npm run dev`.
 
 ## Troubleshooting
 

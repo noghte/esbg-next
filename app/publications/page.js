@@ -10,7 +10,7 @@ export async function fetchPublicationsData() {
     }
 
     try {
-        const response = await axios.get('https://esbg.lunovid.com/api/publications', {
+        const response = await axios.get(`${process.env.DEV_SERVER}/api/publications`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
