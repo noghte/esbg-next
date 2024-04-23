@@ -1,44 +1,47 @@
 "use client";
 import Image from 'next/image';
 
+function chunk(array, size) {
+    const chunkedArr = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunkedArr.push(array.slice(i, i + size));
+    }
+    return chunkedArr;
+  }
 const News = ({ data }) => {
     if (!data || data.length === 0) {
         return <p>No news available.</p>;
     }
 
     // Sorting the news items by date from newest to oldest
-    const sortedData = data.sort((a, b) => new Date(b.attributes.PublishDate) - new Date(a.attributes.PublishDate));
+    const chunkedData = chunk(data, 3);
 
     return (
         <div className="wrapper style3">
             <section className="container">
-                <header className="major">
-                    <h2>
-                        <a name="news">RECENT NEWS</a>
-                    </h2>
-                    <a href="/news" className="button alt">READ ALL NEWS</a>
-                    <a href="/publications" className="button alt">Latest Publications</a>
-                </header>
-
-                <div className="row">
-                    {sortedData.slice(0, 6).map((item, index) => (
-                        <div key={index} className="4u 12u(narrower)">
-                            <section className="special">
-                                <br />
-                                {/* If there's an image, render it. Note: You'll need to adjust 'item.attributes.image' if your items have images */}
-                                <a href={item.attributes.Text || '#'} className="image fit">
-                                    <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
-                                </a>
-                                <p>{item.attributes.PublishDate}</p>
-                                <a href={item.attributes.Text || '#'}><h3>{item.attributes.Title}</h3></a>
-                                {/* <p>{item.attributes.Text}</p> */}
-                            </section>
-                        </div>
-                    ))}
-                </div>
-
+      {chunkedData.map((row, rowIndex) => (
+        <div key={rowIndex} className="row">
+          {row.map((item, index) => (
+            <div key={index} className="4u 12u(narrower)">
+              <section className="special">
                 <br />
-            </section>
+                {/* Conditional rendering of image if exists */}
+                <a href={item.attributes.Text || '#'} className="image fit">
+                  <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
+                </a>
+                <p>{item.attributes.PublishDate}</p>
+                <a href={item.attributes.Text || '#'}>
+                  <h3>{item.attributes.Title}</h3>
+                </a>
+                {/* Uncomment below if you want to render Text attribute */}
+                {/* <p>{item.attributes.Text}</p> */}
+              </section>
+            </div>
+          ))}
+        </div>
+      ))}
+      <br />
+    </section>
         </div>
     )
 };

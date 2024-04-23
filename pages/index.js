@@ -27,15 +27,12 @@ async function getLandingPageData(token) {
 
 async function getNewsData(token) {
   try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/news`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/news?sort[0]=PublishDate:desc&sort[1]=createdAt:desc`, {
           headers: {
               Authorization: `Bearer ${token}`,
           },
       });
       let newsData = response.data["data"]; 
-      
-      // Sort news by 'createdAt' property
-      newsData = newsData.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt));
       return newsData;
   } catch (error) {
       console.error('Error fetching news data:', error);
