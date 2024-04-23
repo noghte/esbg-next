@@ -42,7 +42,7 @@ async function getNewsData(token) {
 
 async function getPeopleData(token) {
   try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/people?populate=*`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/people?pagination[pageSize]=1000&populate=*`, {
           headers: {
               Authorization: `Bearer ${token}`,
           },

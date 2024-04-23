@@ -14,7 +14,7 @@ const News = ({ data }) => {
     }
 
     // Sorting the news items by date from newest to oldest
-    const chunkedData = chunk(data, 3);
+    const chunkedData = chunk(data.slice(0, 6), 3);
 
     return (
         <div className="wrapper style3">
