@@ -21,14 +21,17 @@ const Join = () => {
                             <h3>Undergraduate Positions:</h3>
                             <blockquote>Interested in research training in the areas of cancer biology, cell signalling, biochemistry and molecular biology? The Evolutionary Systems Biology Group is seeking enthusiastic undergraduates to work in our laboratory. We are interested in students who can spend at least 5-6 semesters in the lab.
                             </blockquote>
+                            <div style={{padding: "2em", backgroundColor: "#f5fff5"}}>
+Please submit your CV to Dr. Kannan (nkannan-at-uga.edu) for further consideration.
+            </div>
                         </section>
+                  
                     </div>
+                    
                 </section>
             </div>
 
-            <div className="wrapper style1">
-Please submit your CV to Dr. Kannan (nkannan-at-uga.edu) for further consideration.
-            </div>
+
         </div>
     );
 };

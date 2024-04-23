@@ -12,7 +12,7 @@ import axios from 'axios';
 
 async function getLandingPageData(token) {
   try {
-      const response = await axios.get(`${process.env.DEV_SERVER}/api/main-page`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/main-page`, {
           headers: {
               Authorization: `Bearer ${token}`,
           },
@@ -27,7 +27,7 @@ async function getLandingPageData(token) {
 
 async function getNewsData(token) {
   try {
-      const response = await axios.get(`${process.env.DEV_SERVER}/api/news`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/news`, {
           headers: {
               Authorization: `Bearer ${token}`,
           },
@@ -45,12 +45,12 @@ async function getNewsData(token) {
 
 async function getPeopleData(token) {
   try {
-      const response = await axios.get(`${process.env.DEV_SERVER}/api/people?populate=*`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/people?populate=*`, {
           headers: {
               Authorization: `Bearer ${token}`,
           },
       });
-      const peopleData = response.data["data"]; 
+      const peopleData = response.data["data"];
       return peopleData;
   } catch (error) {
       console.error('Error fetching people data:', error);

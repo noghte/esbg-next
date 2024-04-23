@@ -21,7 +21,7 @@ def resize_images_in_directory(directory):
                     new_height = int((max_width / width) * height)
                     
                     # Resize the image
-                    resized_img = img.resize((max_width, new_height), Image.Resampling.LANCZOS)
+                    resized_img = img.resize((max_width, new_height), Image.LANCZOS)
                     
                     # Save the resized image back to the same location
                     resized_img.save(file_path)
@@ -31,4 +31,4 @@ def resize_images_in_directory(directory):
                     print(f"Skipped {filename}, width is within the limit.")
 
 # Replace 'your_directory_path' with the path of the directory containing the images
-resize_images_in_directory('./helpers/data/images')
+resize_images_in_directory('./helpers/data/images2')

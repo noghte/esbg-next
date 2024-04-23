@@ -10,12 +10,14 @@ export const preload = async () => {
 // Fetch data function used by both preload and the component
 export async function fetchNewsData() {
     try {
-        const response = await axios.get('http://localhost:1337/api/people', {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/news`, {
             headers: {
-                Authorization: 'Bearer 553c832eb6b4ac0c844e169a640c7fbe8f1133061a796ce2527db9fea11a09d418823bbd23e49d254865c8d618df48c1dbbe77c162a76a6b13cd8d80041334913b1d17a60a189c671e726f2bd450650ff6e8666720fa3a5251821099d1f69d02b07af7f6fd8fa33e654808323cba9c2ad0d24723d030e8549cbab0f99dacd4b0',
+                Authorization: `Bearer ${token}`,
             },
         });
-        return response.data.data[0]['attributes']; // Modify based on actual response structure
+        let newsData = response.data["data"]; 
+        newsData = newsData.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt));
+        return newsData;
     } catch (error) {
         console.error('Error fetching data:', error);
         return null; // Adjust based on your error handling
@@ -29,9 +31,28 @@ export default async function NewsComponent() {
     }
 
     return(
-        <div style={{border:"1px solid black", padding:"10px", margin:"10px"}}>
-        <div>First Name: {attributes.firstname}</div>
-    </div>
+<div className="wrapper style3">
+            <section className="container">
+                <div className="row">
+                    {sortedData.slice(0, 6).map((item, index) => (
+                        <div key={index} className="4u 12u(narrower)">
+                            <section className="special">
+                                <br />
+                                {/* If there's an image, render it. Note: You'll need to adjust 'item.attributes.image' if your items have images */}
+                                <a href={item.attributes.Text || '#'} className="image fit">
+                                    <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
+                                </a>
+                                <p>{item.attributes.PublishDate}</p>
+                                <a href={item.attributes.Text || '#'}><h3>{item.attributes.Title}</h3></a>
+                                {/* <p>{item.attributes.Text}</p> */}
+                            </section>
+                        </div>
+                    ))}
+                </div>
+
+                <br />
+            </section>
+        </div>
     )
 
 }
