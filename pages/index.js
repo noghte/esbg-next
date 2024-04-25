@@ -8,6 +8,7 @@ import News from '../app/components/News'
 import Software from '../app/components/Software'
 import People from '../app/components/People'
 import Collaborators from '../app/components/Collaborators'
+import Contact from '../app/components/Contact'
 import axios from 'axios';
 
 async function getLandingPageData(token) {
@@ -85,6 +86,7 @@ export default function Home(props) {
       <Software />
       <People data={props.peopleData} />
       <Collaborators />
+      <Contact />
     </div>
     // <main className={styles.main}>
     // {/* <HeaderBanner /> */}

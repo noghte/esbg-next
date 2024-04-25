@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { faNewspaper, faBookReader, faPen, faPeopleGroup, faUserGroup, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import { Noto_Serif_Ethiopic  } from 'next/font/google';
 const noto400 = Noto_Serif_Ethiopic({ subsets: ['latin'], weight: '400' });
-
 
 const Introduction = ({data}) => {
   return (
@@ -22,19 +22,19 @@ const Introduction = ({data}) => {
     <div className="4u 12u(narrower)">
       <section className="box special">
         <FontAwesomeIcon icon={faPen} size="lg" className="icon major" />
-        <h3><u><a href="#research">RESEARCH</a></u></h3>
+        <h3><u><a href="#research">Research</a></u></h3>
       </section>
     </div>
     <div className="4u 12u(narrower)">
       <section className="box special">
         <FontAwesomeIcon icon={faNewspaper} size="lg" className="icon major" />
-        <h3><u><a href="#news">NEWS</a></u></h3>
+        <h3><u><a href="#news">News</a></u></h3>
       </section>
     </div>
     <div className="4u 12u(narrower)">
       <section className="box special">
         <FontAwesomeIcon icon={faBookReader} size="lg" className="icon major" />
-        <h3><u><a href="/publications">PUBLICATIONS</a></u></h3>
+        <h3><u><Link href="/publications">Publications</Link></u></h3>
       </section>
     </div>
   </div>
@@ -48,13 +48,13 @@ const Introduction = ({data}) => {
     <div className="4u 12u(narrower)">
       <section className="box special">
         <FontAwesomeIcon icon={faPeopleGroup} size="lg" className="icon major" />
-        <h3><u><a href="#people">PEOPLE</a></u></h3>
+        <h3><u><a href="#people">People</a></u></h3>
       </section>
     </div>
     <div className="4u 12u(narrower)">
       <section className="box special">
         <FontAwesomeIcon icon={faUserGroup} size="lg" className="icon major" />
-        <h3><u><a href="#collaborators">COLLABORATORS</a></u></h3>
+        <h3><u><a href="#collaborators">Collaborators</a></u></h3>
       </section>
     </div>
   </div>

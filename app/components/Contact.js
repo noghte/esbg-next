@@ -13,7 +13,7 @@ const Contact = () => {
 							<div class="row uniform">
 								<div class="7u 12u(narrower)">
 								<div class="image fit">
-									<Image src="images/labpicture.jpg" alt="" />
+									<Image src="images/labpicture.jpg" alt="Lab picture" width="400" height="450" />
 								</div>	
 									{/* <!--<form method="get" action="MAILTO:nkannan@uga.edu">
 										<div class="row uniform 50%">

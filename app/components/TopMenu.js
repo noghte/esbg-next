@@ -2,9 +2,6 @@
 import React, { useState } from "react";
 import Link from 'next/link';
 
-
-
-
 const TopMenu = () => {
 	const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -41,7 +38,7 @@ const TopMenu = () => {
 						</a> 
                         {isDropdownVisible && (
                             <ul className="dropdown-menu" style={{ WebkitUserSelect: "none", backgroundColor: "#2F3B47", display: "block", position: "absolute", listStyleType: "none" }}>
-                                <li className="MenuItem"><Link href="/#research">Ongoing Research</Link></li>
+                                <li className="MenuItem"><Link href="/#research">Research</Link></li>
                                 <li className="MenuItem"><Link href="/#news">News</Link></li>
                                 <li className="MenuItem"><Link href="/publications">Publications</Link></li>
                                 <li className="MenuItem"><Link href="/#software">Software</Link></li>

@@ -19,6 +19,9 @@ const News = ({ data }) => {
     return (
         <div className="wrapper style3">
             <section className="container">
+            <header className="major">
+      <h2><a name="news">News</a></h2>
+    </header>
       {chunkedData.map((row, rowIndex) => (
         <div key={rowIndex} className="row">
           {row.map((item, index) => (
