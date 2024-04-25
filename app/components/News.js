@@ -8,6 +8,41 @@ function chunk(array, size) {
     }
     return chunkedArr;
   }
+
+  function checkLink(text) {
+    // Helper function to check and extract URL if starts with "http://"
+    const extractUrl = (possibleUrl) => {
+      if (typeof possibleUrl === 'string' && possibleUrl.startsWith('http')) {
+        return possibleUrl;
+      }
+      return '';
+    };
+  
+    // Directly check if text itself is a valid URL
+    if (typeof text === 'string') {
+      return extractUrl(text);
+    }
+  
+    // Check if text is an array and has a structured property possibly containing a URL
+    if (Array.isArray(text) && text.length > 0) {
+      if (text[0].children && text[0].children.length > 0) {
+        // Iterate over children to find the first valid URL
+        for (const child of text[0].children) {
+          if (child.type === 'link' && child.url) {
+            return extractUrl(child.url);
+          } else if (child.type === 'text' && child.value) {
+            const foundUrl = extractUrl(child.value);
+            if (foundUrl) {
+              return foundUrl;
+            }
+          }
+        }
+      }
+    }
+  
+    return '';
+  }
+  
 const News = ({ data }) => {
     if (!data || data.length === 0) {
         return <p>No news available.</p>;
@@ -33,9 +68,19 @@ const News = ({ data }) => {
                   <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
                 </a>
                 <p>{item.attributes.PublishDate}</p>
-                <a href={item.attributes.Text || '#'}>
-                  <h3>{item.attributes.Title}</h3>
-                </a>
+                {/* Check if url is valid and conditionally render <h3> inside or outside <a> */}
+                {(() => {
+                  const url = checkLink(item.attributes.Text);
+                  if (url==='') {
+                    return <h3>{item.attributes.Title}</h3>;
+                  } else {
+                    return (
+                      <a href={url}>
+                        <h3>{item.attributes.Title}</h3>
+                      </a>
+                    );
+                  }
+                })()}
                 {/* Uncomment below if you want to render Text attribute */}
                 {/* <p>{item.attributes.Text}</p> */}
               </section>
