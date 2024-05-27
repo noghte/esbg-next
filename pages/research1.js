@@ -1,39 +1,56 @@
 import React from "react";
 
-const Join = () => {
-
+const Research1 = () => {
     return (
         <div>
-            <div className="wrapper style1">
-                <section id="main" className="container">
-                    <header className="major">
-                        <h2>Submit CV</h2>
-                    </header>
-                    <div id="page-wrapper">
-                        <section className="box">
-                            <h3>Postdoctoral Position:</h3>
-                            <blockquote>Post-doctoral positions are available to investigate the regulatory mechanisms of protein kinases using computational and experimental techniques. Research experience in molecular biology, molecular evolution, genomics, structural biology or bioinformatics is required. Experience in applying sequence analysis and standard computational tools in a Linux/Unix environment is desirable, but not required.
-                                We are an inter-disciplinary research group interested in using the evolutionary information embedded in genomic sequences to understand how signaling proteins, such as protein kinases, work. For more information on what we do, visit our homepage.
-                            </blockquote>
+            <div id="page-wrapper">
 
-                            <hr />
+            
 
-                            <h3>Undergraduate Positions:</h3>
-                            <blockquote>Interested in research training in the areas of cancer biology, cell signalling, biochemistry and molecular biology? The Evolutionary Systems Biology Group is seeking enthusiastic undergraduates to work in our laboratory. We are interested in students who can spend at least 5-6 semesters in the lab.
-                            </blockquote>
-                            <div style={{padding: "2em", backgroundColor: "#f5fff5"}}>
-Please submit your CV to Dr. Kannan (nkannan-at-uga.edu) for further consideration.
+                {/* Main */}
+                <div className="wrapper style1">
+                    <section id="main" className="container">
+                        <header className="major">
+                            <h3>Ongoing research</h3>
+                        </header>
+                        <div className="row">
+                            <div className="8u 12u(narrower)">
+
+                                {/* Content */}
+                                <section id="content" className="box">
+                                    <a href="#" className="image fit">
+                                        <img src="images/research1.png" alt="" />
+                                    </a>
+                                    <h4>Mapping genome-phenome relationships in large protein families</h4>
+                                    <p>The Kannan lab is focused on pursuing rigorous and deep biological questions connecting protein sequence, structure, function, and regulation as an essential step toward inferring causal genome-phenome relationships. We focus on large gene families such as protein kinases, glycosyltransferases, and ion channels that contribute to diverse disease phenotypes such as cancer, diabetes, Alzheimer’s, and Parkinson's'. We deploy systems approaches combining computational and experimental techniques to generate and test models of protein structure, function, evolution, and dynamics. We aim to develop personalized therapeutic strategies based on a deeper understanding of how these proteins work in disease and normal states. Our studies have provided new mechanistic insights into the unique modes of regulation in various protein kinases [1, 2], small molecule kinases [3], and pseudokinases [4] and have revealed the mechanism of action of oncogenic mutations in receptor tyrosine kinases [5]. We have also successfully employed the specialized tools and approaches developed for studying protein kinases to glycosyltransferases [6, 7] and are currently extending these approaches to studying ion channels.</p>
+                                </section>
+                            </div>
+                            <div className="4u 12u(narrower)">
+
+                                {/* Sidebar */}
+                                <section id="sidebar" className="box">
+                                    <section>
+                                        <h3>Selected Publications:</h3>
+                                        <ol>
+                                            <li><a href="https://www.biorxiv.org/content/biorxiv/early/2023/03/29/2023.03.29.534689.full.pdf">Mechanistic and evolutionary insights into isoform-specific 'supercharging' in DCLK family kinases</a><hr /></li>
+                                            <li><a href="https://academic.oup.com/bioinformatics/article/39/2/btad046/7000331">Evolution of Functional Diversity in the Holozoan Tyrosine Kinome</a><hr /></li>
+                                            <li><a href="https://www.science.org/doi/10.1126/scisignal.aax6313?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">A redox-active switch in fructosamine-3-kinases expands the regulatory repertoire of the protein kinase superfamily</a><hr /></li>
+                                            <li><a href="https://www.science.org/doi/10.1126/scisignal.aav3810?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">Tracing the origin and evolution of pseudokinases across the tree of life</a><hr /></li>
+                                            <li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003545">Prediction and Prioritization of Rare Oncogenic Mutations in the Cancer Kinome Using Novel Features and Multiple Classifiers</a><hr /></li>
+                                            <li><a href="https://www.jbc.org/article/S0021-9258(22)00654-8/fulltext">Modularity of the hydrophobic core and evolution of functional diversity in fold A glycosyltransferases</a><hr /></li>
+                                            <li><a href="https://elifesciences.org/articles/54532">Deep evolutionary analysis reveals the design principles of fold A glycosyltransferases</a><br /><br />
+                                                <a href="/publications" className="button alt">View all publications</a><hr /></li>
+                                        </ol>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
             </div>
-                        </section>
-                  
-                    </div>
-                    
-                </section>
-            </div>
-
-
         </div>
     );
 };
 
-export default Join;
+export default Research1;

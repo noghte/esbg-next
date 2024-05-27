@@ -10,7 +10,7 @@ const Software = () => {
   <section className="container 75%">
     <header className="major">
       <h2><a name="software">Software</a></h2>
-      <a href="software.html" className="button alt">All Software</a>
+      <a href="software" className="button alt">All Software</a>
     </header>
     <div className="row uniform">
       <div className="6u 12u(narrower)">

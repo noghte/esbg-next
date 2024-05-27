@@ -1,39 +1,48 @@
 import React from "react";
 
-const Join = () => {
-
+const Research2 = () => {
     return (
-        <div>
+        <div id="page-wrapper">
+            {/* Main */}
             <div className="wrapper style1">
                 <section id="main" className="container">
                     <header className="major">
-                        <h2>Submit CV</h2>
+                        <h3>Ongoing research</h3>
                     </header>
-                    <div id="page-wrapper">
-                        <section className="box">
-                            <h3>Postdoctoral Position:</h3>
-                            <blockquote>Post-doctoral positions are available to investigate the regulatory mechanisms of protein kinases using computational and experimental techniques. Research experience in molecular biology, molecular evolution, genomics, structural biology or bioinformatics is required. Experience in applying sequence analysis and standard computational tools in a Linux/Unix environment is desirable, but not required.
-                                We are an inter-disciplinary research group interested in using the evolutionary information embedded in genomic sequences to understand how signaling proteins, such as protein kinases, work. For more information on what we do, visit our homepage.
-                            </blockquote>
+                    <div className="row">
+                        <div className="8u 12u(narrower)">
 
-                            <hr />
+                            {/* Content */}
+                            <section id="content" className="box">
+                                <a href="#" className="image fit">
+                                    <img src="images/research2.png" alt="" />
+                                </a>
+                                <h4>Artificial Intelligence and deep learning models for biochemical applications</h4>
+                                <p>The Kannan lab is exploring cutting-edge AI research in the field of protein function prediction. One key area is understanding and predicting post-translational modifications, which are critical to regulating cellular processes. We developed a unified framework (Phosphormer) [1] using protein language models to generate context-aware features from primary protein sequence data to predict kinase-specific phosphosites. We are working on enabling this model to make accurate phosphosite predictions across the entire kinome and expand to other post-translational modifications. We have further developed workflows and visualization methods to classify protein families using sequence embeddings or feature-rich numerical representations of protein sequences. These embeddings infer proteins' structural and functional properties based solely on sequence information. We successfully applied this in the classification of phosphatases, protein kinases, and the S-Adenosyl-L-Methionine (SAM) enzyme superfamily, generating Neighbor-Joining (NJ) embedding trees as an orthogonal method to phylogeny for visualization of evolutionary information [2, 3, 4]. These studies highlight AI's transformative power in protein science, offering significant insights into protein structure, function, and dynamics.</p>
+                            </section>
+                        </div>
+                        <div className="4u 12u(narrower)">
 
-                            <h3>Undergraduate Positions:</h3>
-                            <blockquote>Interested in research training in the areas of cancer biology, cell signalling, biochemistry and molecular biology? The Evolutionary Systems Biology Group is seeking enthusiastic undergraduates to work in our laboratory. We are interested in students who can spend at least 5-6 semesters in the lab.
-                            </blockquote>
-                            <div style={{padding: "2em", backgroundColor: "#f5fff5"}}>
-Please submit your CV to Dr. Kannan (nkannan-at-uga.edu) for further consideration.
-            </div>
-                        </section>
-                  
+                            {/* Sidebar */}
+                            <section id="sidebar" className="box">
+                                <section>
+                                    <h3>Selected Publications:</h3>
+                                    <ol>
+                                        <li><a href="https://academic.oup.com/bioinformatics/article/39/2/btad046/7000331">Phosformer: an explainable transformer model for protein kinase-specific phosphorylation predictions</a><hr /></li>
+                                        <li><a href="https://academic.oup.com/bib/article/24/1/bbac619/6987820">Tree visualizations of protein sequence embedding space enable improved functional clustering of diverse protein superfamilies</a><hr /></li>
+                                        <li><a href="https://academic.oup.com/bib/article/24/1/bbac599/6984799">Alignment-free estimation of sequence conservation for identifying functional sites using protein sequence embeddings</a><hr /></li>
+                                        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8476585/">Mapping the glycosyltransferase fold landscape using interpretable deep learning</a><br /><br />
+                                            <a href="publications" className="button alt">View all publications</a><hr /></li>
+                                    </ol>
+                                </section>
+                            </section>
+                        </div>
                     </div>
-                    
                 </section>
             </div>
-
 
         </div>
     );
 };
 
-export default Join;
+export default Research2;
