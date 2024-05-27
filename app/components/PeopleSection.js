@@ -5,7 +5,8 @@ import Image from 'next/image';
 function getImageUrl(person) {
     // Check if 'Photo' and its nested properties exist
     if (person.attributes.Photo && person.attributes.Photo.data && person.attributes.Photo.data.attributes.url) {
-        return `${process.env.NEXT_PUBLIC_DEV_SERVER}${person.attributes.Photo.data.attributes.url}`;
+        const filename = person.attributes.Photo.data.attributes.url.split('/').pop();
+        return `/images/${filename}`;
     }
     // Return placeholder if any part is missing
     return '/images/default-person.png';
