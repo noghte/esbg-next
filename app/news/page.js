@@ -49,11 +49,11 @@ export default async function NewsComponent() {
               <section className="special">
                 <br />
                 {/* Conditional rendering of image if exists */}
-                <a href={item.attributes.Text || '#'} className="image fit">
+                <a href={'#'} className="image fit">
                   <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
                 </a>
                 <p>{item.attributes.PublishDate}</p>
-                <a href={item.attributes.Text || '#'}>
+                <a href={'#'}>
                   <h3>{item.attributes.Title}</h3>
                 </a>
                 {/* Uncomment below if you want to render Text attribute */}

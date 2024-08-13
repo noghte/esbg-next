@@ -1,6 +1,16 @@
 "use client";
 import Image from 'next/image';
 
+function getImageUrl(item) {
+  // Check if 'Photo' and its nested properties exist
+  if (item.attributes.Media?.data?.[0]?.attributes?.url) {
+      const filename = item.attributes.Media.data[0].attributes.url.split("/").pop();
+      return `/images/${filename}`;
+  }
+  // Return placeholder if any part is missing
+  return '/images/news.png';
+}
+
 function chunk(array, size) {
     const chunkedArr = [];
     for (let i = 0; i < array.length; i += size) {
@@ -64,9 +74,15 @@ const News = ({ data }) => {
               <section className="special">
                 <br />
                 {/* Conditional rendering of image if exists */}
-                <a href={item.attributes.Text || '#'} className="image fit">
-                  <Image src={item.attributes.image || '/images/news.png'} width={461} height={162} alt="News Item" />
-                </a>
+                <div className="image fit">
+                  <Image 
+                    // src={item.attributes.Media?.data?.[0]?.attributes?.url ?? '/images/news.png'} 
+                    src={getImageUrl(item)}
+                    width={461} 
+                    height={162} 
+                    alt="News Item" 
+                  />
+                </div>
                 <p>{item.attributes.PublishDate}</p>
                 {/* Check if url is valid and conditionally render <h3> inside or outside <a> */}
                 {(() => {

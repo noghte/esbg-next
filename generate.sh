@@ -20,5 +20,6 @@ echo "Do you want to update the main website? (y/n)"
 read -r answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     # rsync -vzr ./out/ esbgbmb@ugawebhosting.uga.edu:/usr/www/prod/esbg.bmb/public_html/
-    echo "Implement me"
+    cp -r ./out/* ~/workspace/esbgkannan.github.io
+    echo "Navigate to the ~/workspace/esbgkannan.github.io and run 1. git add . 2. git commit 3. git push"
 fi

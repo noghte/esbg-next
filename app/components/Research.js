@@ -18,7 +18,7 @@ const Research = () => {
           <FontAwesomeIcon icon={faDna} size="lg" className="icon major alt" />
           <h3><u><a href="research1">Mapping genome-phenome relationships in large protein families</a></u></h3>
           {/* <p>Proteins are essential components of all living organisms and play critical roles in various biological processes. Many proteins belong to large families with members that share similar structures and functions, and abnormal functioning of proteins is causally associated with metabolic, congenital, and neurodegenerative disorders. Our lab is dedicated to understanding the complex relationships connecting sequence, structure and function, and disease in biomedically important protein families with the ultimate goal of developing new personalized therapies.</p> */}
-		  <p>Proteins are essential for life and malfunctions are linked to diseases. Our lab studies these complex molecules to develop new therapies.</p>
+		  <p>Proteins are essential for life and their malfunctions are linked to diseases. Our lab studies these complex molecules to develop new therapies.</p>
           <a href="research1" className="button alt">READ MORE</a>
         </section>
       </div>

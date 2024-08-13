@@ -28,7 +28,7 @@ async function getLandingPageData(token) {
 
 async function getNewsData(token) {
   try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/news?sort[0]=PublishDate:desc&sort[1]=createdAt:desc`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_DEV_SERVER}/api/news?populate=*&sort[0]=PublishDate:desc&sort[1]=createdAt:desc`, {
           headers: {
               Authorization: `Bearer ${token}`,
           },

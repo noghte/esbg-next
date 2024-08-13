@@ -2,16 +2,23 @@
 import React from 'react';
 import Image from 'next/image';
 
+// function getImageUrl(person) {
+//     // Check if 'Photo' and its nested properties exist
+//     if (person.attributes.Photo && person.attributes.Photo.data && person.attributes.Photo.data.attributes.url) {
+//         const filename = person.attributes.Photo.data.attributes.url.split('/').pop();
+//         return `/images/${filename}`;
+//     }
+//     // Return placeholder if any part is missing
+//     return '/images/default-person.png';
+// }
 function getImageUrl(person) {
     // Check if 'Photo' and its nested properties exist
     if (person.attributes.Photo && person.attributes.Photo.data && person.attributes.Photo.data.attributes.url) {
-        const filename = person.attributes.Photo.data.attributes.url.split('/').pop();
-        return `/images/${filename}`;
+        return `${process.env.NEXT_PUBLIC_DEV_SERVER}${person.attributes.Photo.data.attributes.url}`;
     }
     // Return placeholder if any part is missing
     return '/images/default-person.png';
 }
-
 const PeopleSection = ({ data, status }) => { // Now accepts 'data' and 'status' as props
     // Filter the data based on the status ('current' or 'alumni')
     const filteredData = data.filter((person) => person.attributes.work_status === status);

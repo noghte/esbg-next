@@ -59,7 +59,7 @@ const Contact = () => {
 										</li>
 										<li>
 											<h3 className="icon fa-twitter"><span className="label">Twitter</span></h3>
-											<a href="https://twitter.com/kannanlab?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @kannanlab</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+											<a href="https://twitter.com/kannanlab?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @kannanlab</a><script async src="https://platform.twitter.com/widgets.js"></script>
 										</li>
 										<li>
 											<h3 className="icon fa-google"><span className="label">Google Scholar</span></h3>
