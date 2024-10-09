@@ -26,7 +26,13 @@ const People = ({ data }) => {
 
                         <section className="special">
                             <a href="http://www.bmb.uga.edu/directory/natarajan-kannan">
-                                <Image src="/images/kannan2.jpg" alt="Kannan" width={382} height={573} />
+                            <Image 
+                                src="/images/kannan2.jpg" 
+                                alt="Kannan" 
+                                width={382} 
+                                height={573} 
+                                style={{ width: '100%', maxWidth: '382px', height: 'auto', color: 'transparent' }} 
+                                />
                                 </a>
                             <h3>Dr. Natarajan Kannan</h3>
                             <p><b>Professor and Georgia Coalition Distinguished Scholar</b></p>

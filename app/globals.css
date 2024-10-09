@@ -251,7 +251,7 @@
 
 .outer-div{     padding: 10px;}
 .inner-div{     margin: 0 auto;     
-                width: 40%; }
+                width: auto; }
 
 	.row {
 		border-bottom: solid 1px transparent;
